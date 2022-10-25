@@ -1,0 +1,140 @@
+body{
+max-width: 1060px;
+margin: 0 auto;
+}
+
+h1{
+    font-size: 50px;
+    margin-bottom: 10px;
+
+}
+h2{
+    font-size: 19px;
+    margin-bottom: 5px;
+}
+
+time{
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+/*GridHeader start*/
+
+.grid_header {
+    /*Grid разметка контейнера*/
+    display: grid;
+    /*Сокращенная запись для отображения колонок и столбцов*/
+    grid-template-columns: max-content 1fr;
+    /*Для оставшихся элементов, не включенных в столбцы и строки:*/  
+    grid-auto-rows: 80px;   
+    column-gap: 2px;  
+    margin-bottom: 10px;
+    
+}
+
+.grid_list{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: 40px;  
+    column-gap: 2px;
+    margin-top: 5px;
+    
+    
+}
+.list_item{
+    background-color: #1ac66c;
+    padding: 5px 5px;
+}
+
+.list_link{
+    text-decoration: none;
+    color: white;
+    font-size: 25px; 
+    align-items: top;   
+}
+
+.list_item:hover, .list_item:focus, .list_link:active{
+    background: gray ;
+    color: gold;
+}
+
+.Logo {
+    background: none;
+}
+
+.grid_header a:focus, .grid_header a:hover{
+    color: greenyellow;
+}
+
+/*GridHeader end*/
+
+
+
+/*GridArticle start*/
+
+.grid_article {
+    /*Grid разметка контейнера*/
+    display: grid;
+   /*Сокращенная запись для отображения колонок и столбцов*/
+    grid-template-columns: max-content 1fr;
+    grid-template-rows:repeat(2, auto);
+    /*Для оставшихся элементов, не включенных в столбцы и строки:*/  
+    grid-auto-rows: auto;
+    
+}
+
+    .grid_article div:nth-child(1) {
+    background: none;
+}
+.grid_article div:nth-child(2) {
+    background: none;
+    color: rgb(119, 116, 116);
+    padding: 0 10px;
+}
+
+.grid_article div:nth-child(3) {
+    grid-column: 1/5;
+    background: none;
+    color: rgb(119, 116, 116);
+    font-size: 30px;
+    padding: 10px 0;
+}
+
+/*GridArticle end*/
+     
+/*GridNews start*/
+.grid_news {
+    /*Grid разметка контейнера*/
+    display: grid;
+   /*Сокращенная запись для отображения колонок и столбцов*/
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows:repeat(3, max-content);
+    /*Для оставшихся элементов, не включенных в столбцы и строки:*/  
+    grid-auto-rows: auto;
+    padding: auto 0;
+    column-gap: 10px;
+    color: rgb(119, 116, 116);
+}
+
+
+.grid_news p{
+margin-top: 5px;
+margin-bottom: 10px;
+}
+ 
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.grid_news a {
+    text-decoration: none;
+    display: inline-block;
+    color: rgb(119, 116, 116);
+    padding-right: 18px;
+    background: url(../img/arrow-ico.jpg) no-repeat 95% center;
+}
+
+.grid_news a:hover, .grid_news a:focus{
+    background: url(../img/arrow-ico.jpg) no-repeat right center;
+}
+/*GridNews end*/
